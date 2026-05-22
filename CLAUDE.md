@@ -11,7 +11,7 @@ Editorial positioning: PT-BR as differentiator. The English-language skill ecosy
 **In scope (Phase 1)**:
 - 3 skills extracted from `~/.claude/projects/-Users-kanhan-Documents/` and polished for external use.
 - README PT-BR + EN, install instructions, MIT license.
-- One distribution channel: public GitHub repo (`github.com/MKanhan/<repo-name>`).
+- One distribution channel: public GitHub repo at **`github.com/MKanhan/skills-for-claude`**.
 - Two announcement posts: 1 EN essay (Substack) + 1 PT-BR (kanhan.com.br) + LinkedIn cross-post.
 
 **Out of scope (Phase 1)**:
@@ -57,16 +57,16 @@ skills/
 - **Portability gate**: a skill is portable when zero references to operator's filesystem (`~/Documents/`, `Infra/data/signals.db`, Notion data sources, etc.) remain. Sprint 01-03 enforce.
 - **No secrets**: no `.env`, no API keys, no LinkedIn cookies.
 - **Tests as guards**: a smoke test per skill verifies it loads + runs with mock inputs.
-- **Branding**: working name "Atelier Skills" (TBD — operator may pick different public name).
+- **Branding**: public repo name is `skills-for-claude` (decided 2026-05-22). "Atelier Skills" is the internal/working name; Phase 2 branding for paid tier deferred.
 
 ## Roadmap
 
 See `ROADMAP.md` for full state. Quick summary:
 
 - **Sprint 00 — Bootstrap** (current). Spec: `specs/00_bootstrap.md`. Directory + scaffolds + LICENSE + .gitignore + spec template.
-- **Sprint 01 — Skill #1 extraction** (planned). Operator picks 1 skill from candidates (see ROADMAP). Polish + test + README.
-- **Sprint 02 — Skill #2 extraction** (planned).
-- **Sprint 03 — Skill #3 extraction** (planned).
+- **Sprint 01 — `/spec` extraction** (planned). Polish + test + README.
+- **Sprint 02 — `/personas` extraction** (planned).
+- **Sprint 03 — `/audit` extraction** (planned).
 - **Sprint 04 — Public launch** (planned). README polish, GitHub repo public, 2 announcement posts, LinkedIn.
 - **Sprint 05 — Measurement gate** (planned). 30 days post-launch: count stars, issues, PRs. Decision: continue to Phase 2 or kill.
 
@@ -74,10 +74,12 @@ See `ROADMAP.md` for full state. Quick summary:
 
 **Last update**: 2026-05-22 — project initialized. Operator approved Phase 1 scope after `/propose` ideation session. No code yet; bootstrap is purely structural.
 
+**Decisions captured 2026-05-22** (post-bootstrap):
+- Skills to extract: `/spec` (Sprint 01), `/personas` (Sprint 02), `/audit` (Sprint 03).
+- Public repo name: `mkanhan/skills-for-claude`.
+
 **Operator pending**:
-1. Pick the 3 skills to extract in Sprints 01-03. Candidates (subset of operator's current skills): `/spec`, `/personas`, `/audit`, `/retrofit`. See ROADMAP for trade-offs.
-2. Decide working repo name (`claude-skills-pt-br` is a candidate; alternatives: `atelier-skills`, `claude-skills-br`).
-3. Decide branding for paid tier (deferred to Phase 2 — not blocking).
+1. (Phase 2 only) Decide branding + pricing for paid tier — deferred until Phase 2 trigger fires.
 
 **Critical files**: none yet (no code).
 

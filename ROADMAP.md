@@ -15,11 +15,11 @@ Goal: publish 3 polished skills in a public GitHub repo. Measure adoption. Decid
 Cost target: <40h of operator time over 4 weeks. Zero R$ cost (no infra, no paid tools).
 
 **Sprints**:
-- **00 — Bootstrap** (in progress, this commit). Spec: `specs/00_bootstrap.md`.
-- **01 — Skill #1 extraction**. Spec: `specs/01_<slug>.md` (TBD after skill choice).
-- **02 — Skill #2 extraction**. Spec: `specs/02_<slug>.md`.
-- **03 — Skill #3 extraction**. Spec: `specs/03_<slug>.md`.
-- **04 — Public launch**. Spec: `specs/04_public_launch.md`. README polish, repo public, 2 announcement posts (Substack EN + kanhan.com.br PT-BR), LinkedIn cross-post.
+- **00 — Bootstrap** ✅ done 2026-05-22. Spec: `specs/00_bootstrap.md`. Commit `3413a66`.
+- **01 — `/spec` extraction**. Spec: `specs/01_spec_skill.md` (TBD).
+- **02 — `/personas` extraction**. Spec: `specs/02_personas_skill.md` (TBD).
+- **03 — `/audit` extraction**. Spec: `specs/03_audit_skill.md` (TBD).
+- **04 — Public launch**. Spec: `specs/04_public_launch.md`. README polish, push to `github.com/MKanhan/skills-for-claude`, 2 announcement posts (Substack EN + kanhan.com.br PT-BR), LinkedIn cross-post.
 - **05 — Measurement gate**. Spec: `specs/05_measurement_gate.md`. Day-30 review.
 
 ### Phase 2 — Paid tier (deferred, conditional)
@@ -44,22 +44,17 @@ Goal: monetize Phase 1 audience with a curated premium skill pack.
 
 Tickets: R$ 49/mês recurring OR R$ 399 lifetime. Operator picks at Sprint 12.
 
-## Candidate skills for Phase 1
+## Skills for Phase 1 (decided 2026-05-22)
 
-The 3 skills to extract get picked from operator's current set, balancing (a) portability (low filesystem coupling) and (b) demonstration of operator's PT-BR domain.
+The 3 skills get extracted in this order:
 
-| Candidate | Source location | Portability effort | PT-BR distinct value | Notes |
-|-----------|-----------------|-------------------|----------------------|-------|
-| `/spec` | workspace-wide | Low — already operator-agnostic | Low — works any lang | Strong demo of spec-driven discipline |
-| `/personas` | cultivation/ | Medium — references goldens, profiles | **High** — 5 PT-BR business personas | Showcases curation depth |
-| `/audit` | workspace tool | Low | Low | Generic dev tool |
-| `/retrofit` | content/ | High — references guidelines, goldens | High — PT-BR editorial conventions | Heavy to port; defer |
-| `/propose` | sales hub | Very high — couples to signals.db + Notion | Medium | Not portable; skip |
+| Order | Skill | Source | Portability effort | Distinct value |
+|-------|-------|--------|-------------------|----------------|
+| Sprint 01 | `/spec` | workspace-wide | Low — already operator-agnostic | Demonstrates spec-driven discipline (operator's signature workflow) |
+| Sprint 02 | `/personas` | cultivation/ | Medium — references goldens + profiles | **PT-BR moat** — 5 business reader personas, hardest to clone |
+| Sprint 03 | `/audit` | workspace tool | Low | General-purpose codebase audit (broader appeal) |
 
-**Recommended picks** (operator confirms):
-1. `/spec` — universal appeal, easy port, demonstrates discipline.
-2. `/personas` — PT-BR moat, hardest to clone, showcases editorial depth.
-3. `/audit` OR `/retrofit` — operator picks based on which is closer to ready.
+`/retrofit` and `/propose` were considered but excluded: `/retrofit` ports are too coupled to operator's editorial guidelines; `/propose` is tightly bound to operator's signals.db + Notion. Both stay private.
 
 ## Deferred (not in scope)
 
