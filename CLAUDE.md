@@ -72,17 +72,22 @@ See `ROADMAP.md` for full state. Quick summary:
 
 ## Handoff
 
-**Last update**: 2026-05-26 — Sprints 01–03 done. All 3 skills (`/spec`, `/personas`, `/audit`) shipped with bilingual READMEs + smoke tests, all green. Tags `sprint-01-spec`, `sprint-02-personas`, `sprint-03-audit`. Sprint 04 (public launch prep) is next in auto mode.
+**Last update**: 2026-05-26 — Sprints 01–04 done locally. All 3 skills shipped. README polished + bilingual title + skills table + install + CI badge. CONTRIBUTING.md + `.github/workflows/ci.yml` in place. 4 announcement drafts in `outputs/` (gitignored, operator-local). Tag `v0.1.0` local. Sprint 05 (measurement gate) is next in auto mode.
 
 **Decisions captured 2026-05-22** (post-bootstrap):
 - Skills to extract: `/spec` (Sprint 01), `/personas` (Sprint 02), `/audit` (Sprint 03).
 - Public repo name: `MKanhan/skills-for-claude` (created publicly, empty).
 - Public title: `Skills for Claude / Skills para Claude`.
 
-**Operator pending**:
-1. After Sprint 04 commits + tags `v0.1.0` locally: `git push origin main && git push --tags` (operator-only action).
-2. After Sprint 04 drafts: review and publish 4 announcement posts (Substack via `/push-substack`, kanhan.com.br + LinkedIn manual).
-3. (Phase 2 only) Decide branding + pricing for paid tier — deferred until Phase 2 trigger fires.
+**Operator pending** (post-auto-mode):
+1. Push to remote — Sprint 04 committed + tagged `v0.1.0` locally. Run `git push origin main && git push --tags` to make it public (operator-only action).
+2. Review 4 announcement drafts in `outputs/posts/`:
+   - `en/skills-for-claude-launch.md` (~1262 words) — publish to Substack via `/push-substack`.
+   - `pt-br/skills-para-claude-lancamento.md` (~916 words) — publish manually to kanhan.com.br.
+   - `linkedin/en.md` (~254 words) — publish manually to LinkedIn after Substack URL is live.
+   - `linkedin/pt-br.md` (~261 words) — publish manually to LinkedIn after kanhan.com.br URL is live.
+3. After Day 30 (≈ 2026-06-25): run `bash tools/measure.sh` and follow Sprint 05 branch decision (trigger Phase 2 / extend / kill).
+4. (Phase 2 only) Decide branding + pricing for paid tier — deferred until Phase 2 trigger fires.
 
 **Critical files**:
 - `skills/spec/SKILL.md` — `/spec` skill entry point.

@@ -7,3 +7,7 @@ __pycache__/
 node_modules/
 .idea/
 .vscode/
+
+# Operator-local announcement drafts (status: draft). Published manually
+# via /push-substack, kanhan.com.br, and LinkedIn — not from this repo.
+outputs/
