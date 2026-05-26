@@ -20,7 +20,7 @@ Cost target: <40h of operator time over 4 weeks. Zero R$ cost (no infra, no paid
 - **02 — `/personas` extraction** ✅ done 2026-05-26. Spec: `specs/02_personas_skill.md`. Tag `sprint-02-personas`.
 - **03 — `/audit` extraction** ✅ done 2026-05-26. Spec: `specs/03_audit_skill.md`. Tag `sprint-03-audit`.
 - **04 — Public launch** ✅ done 2026-05-26 (local). Spec: `specs/04_public_launch.md`. README polish + CONTRIBUTING + CI workflow + 4 announcement drafts (in `outputs/`, gitignored, operator-local). Tag `v0.1.0`. **Operator-pending**: `git push origin main && git push --tags`, then publish 4 drafts.
-- **05 — Measurement gate**. Spec: `specs/05_measurement_gate.md`. Day-30 review.
+- **05 — Measurement gate** ✅ done 2026-05-26 (mechanism ready; execution waits for Day 30). Spec: `specs/05_measurement_gate.md`. Helper: `tools/measure.sh`. Tag `sprint-05-measure`. **Operator-pending**: run `bash tools/measure.sh` 30 days after `v0.1.0` push.
 
 ### Phase 2 — Paid tier (deferred, conditional)
 

@@ -72,7 +72,7 @@ See `ROADMAP.md` for full state. Quick summary:
 
 ## Handoff
 
-**Last update**: 2026-05-26 — Sprints 01–04 done locally. All 3 skills shipped. README polished + bilingual title + skills table + install + CI badge. CONTRIBUTING.md + `.github/workflows/ci.yml` in place. 4 announcement drafts in `outputs/` (gitignored, operator-local). Tag `v0.1.0` local. Sprint 05 (measurement gate) is next in auto mode.
+**Last update**: 2026-05-26 — **Phase 1 complete locally.** Sprints 01–05 all done. Five commits, four sprint tags (`sprint-01-spec`, `sprint-02-personas`, `sprint-03-audit`, `sprint-05-measure`) + release tag `v0.1.0`. 3 skills (`/spec`, `/personas`, `/audit`) shipped with bilingual READMEs + smoke tests (all green, CI workflow in place). 4 announcement drafts operator-local in `outputs/` (gitignored). Measurement helper `tools/measure.sh` ready to run on Day 30.
 
 **Decisions captured 2026-05-22** (post-bootstrap):
 - Skills to extract: `/spec` (Sprint 01), `/personas` (Sprint 02), `/audit` (Sprint 03).
@@ -98,6 +98,8 @@ See `ROADMAP.md` for full state. Quick summary:
 - `tests/personas/fixtures/sample-piece.md` — neutral fixture for manual smoke testing.
 - `skills/audit/SKILL.md` — `/audit` skill (read-only codebase health report, `--memory`/`--out`/`--deep` flags).
 - `tests/audit/smoke.sh` — frontmatter + no-private-paths + flag-documentation + read-only-contract check.
+- `tools/measure.sh` — Day-30 measurement helper (gh CLI + jq; emits paste-ready markdown for `skills_log.md`).
+- `.github/workflows/ci.yml` — runs all 3 smoke tests on push and PR.
 
 **References**:
 - Workspace convention: `~/Documents/CLAUDE.md`
