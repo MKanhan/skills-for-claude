@@ -16,9 +16,9 @@ Cost target: <40h of operator time over 4 weeks. Zero R$ cost (no infra, no paid
 
 **Sprints**:
 - **00 — Bootstrap** ✅ done 2026-05-22. Spec: `specs/00_bootstrap.md`. Commit `3413a66`.
-- **01 — `/spec` extraction**. Spec: `specs/01_spec_skill.md` (TBD).
-- **02 — `/personas` extraction**. Spec: `specs/02_personas_skill.md` (TBD).
-- **03 — `/audit` extraction**. Spec: `specs/03_audit_skill.md` (TBD).
+- **01 — `/spec` extraction** ✅ done 2026-05-26. Spec: `specs/01_spec_skill.md`. Tag `sprint-01-spec`.
+- **02 — `/personas` extraction**. Spec: `specs/02_personas_skill.md`.
+- **03 — `/audit` extraction**. Spec: `specs/03_audit_skill.md`.
 - **04 — Public launch**. Spec: `specs/04_public_launch.md`. README polish, push to `github.com/MKanhan/skills-for-claude`, 2 announcement posts (Substack EN + kanhan.com.br PT-BR), LinkedIn cross-post.
 - **05 — Measurement gate**. Spec: `specs/05_measurement_gate.md`. Day-30 review.
 

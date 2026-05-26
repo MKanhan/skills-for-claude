@@ -35,3 +35,22 @@ Decisions + debug history for the skills project. Append-only.
 - Premium skill candidates not in OSS repo.
 
 ---
+
+## 2026-05-26 — Specs 01–05 drafted
+
+**Trigger**: operator requested all 5 sprint specs written before firing auto mode. Two decisions confirmed in same exchange:
+- Public title: `Skills for Claude / Skills para Claude`.
+- Repo created publicly at `https://github.com/MKanhan/skills-for-claude` (empty, awaiting first push).
+
+**Specs written** (52–70 lines each, all under 100-line guideline):
+- `specs/01_spec_skill.md` — `/spec` extraction. Key decisions: project-root marker scan (replaces `~/Documents/` gate), bundled template at `skills/spec/templates/`, EN SKILL.md + bilingual README.
+- `specs/02_personas_skill.md` — `/personas` extraction. Key decision: ship the BR boutique lens as opinionated (not laundered into generic); README front-loads audience framing + customization guide.
+- `specs/03_audit_skill.md` — `/audit` extraction. Key decisions: memory check opt-in (`--memory`), stdout default with `--out` flag, SKILL.md expanded from 14 → ~30 lines for clearer contract.
+- `specs/04_public_launch.md` — first push + tag `v0.1.0` + 4 announcement drafts (Substack EN, kanhan.com.br PT-BR, LinkedIn ×2). **Publishing boundary**: auto mode writes drafts only; operator publishes manually. Tag-push deferred to operator.
+- `specs/05_measurement_gate.md` — `tools/measure.sh` + Day-30 log template + 3 explicit branches (trigger / kill / mid-range). No automated trigger — operator decides.
+
+**Plan file**: `~/.claude/plans/silly-strolling-pebble.md` (approved 2026-05-26).
+
+Auto mode unblocked. Sprint 01 is next.
+
+---

@@ -72,16 +72,22 @@ See `ROADMAP.md` for full state. Quick summary:
 
 ## Handoff
 
-**Last update**: 2026-05-22 — project initialized. Operator approved Phase 1 scope after `/propose` ideation session. No code yet; bootstrap is purely structural.
+**Last update**: 2026-05-26 — Sprint 01 (`/spec` extraction) done. Skill + bundled template + bilingual README + smoke test live under `skills/spec/` and `tests/spec/`. Smoke test passes. Tag `sprint-01-spec`. Sprint 02 (`/personas`) is next in auto mode.
 
 **Decisions captured 2026-05-22** (post-bootstrap):
 - Skills to extract: `/spec` (Sprint 01), `/personas` (Sprint 02), `/audit` (Sprint 03).
-- Public repo name: `mkanhan/skills-for-claude`.
+- Public repo name: `MKanhan/skills-for-claude` (created publicly, empty).
+- Public title: `Skills for Claude / Skills para Claude`.
 
 **Operator pending**:
-1. (Phase 2 only) Decide branding + pricing for paid tier — deferred until Phase 2 trigger fires.
+1. After Sprint 04 commits + tags `v0.1.0` locally: `git push origin main && git push --tags` (operator-only action).
+2. After Sprint 04 drafts: review and publish 4 announcement posts (Substack via `/push-substack`, kanhan.com.br + LinkedIn manual).
+3. (Phase 2 only) Decide branding + pricing for paid tier — deferred until Phase 2 trigger fires.
 
-**Critical files**: none yet (no code).
+**Critical files**:
+- `skills/spec/SKILL.md` — `/spec` skill entry point.
+- `skills/spec/templates/spec-template.md` — bundled template.
+- `tests/spec/smoke.sh` — portability + frontmatter check.
 
 **References**:
 - Workspace convention: `~/Documents/CLAUDE.md`
