@@ -72,7 +72,7 @@ See `ROADMAP.md` for full state. Quick summary:
 
 ## Handoff
 
-**Last update**: 2026-05-26 — Sprints 01 (`/spec`) + 02 (`/personas`) done. Both skills + bilingual READMEs + smoke tests live under `skills/` and `tests/`. Tags `sprint-01-spec`, `sprint-02-personas`. Sprint 03 (`/audit`) is next in auto mode.
+**Last update**: 2026-05-26 — Sprints 01–03 done. All 3 skills (`/spec`, `/personas`, `/audit`) shipped with bilingual READMEs + smoke tests, all green. Tags `sprint-01-spec`, `sprint-02-personas`, `sprint-03-audit`. Sprint 04 (public launch prep) is next in auto mode.
 
 **Decisions captured 2026-05-22** (post-bootstrap):
 - Skills to extract: `/spec` (Sprint 01), `/personas` (Sprint 02), `/audit` (Sprint 03).
@@ -91,6 +91,8 @@ See `ROADMAP.md` for full state. Quick summary:
 - `skills/personas/SKILL.md` — `/personas` skill (5 reader personas, PT-BR output).
 - `tests/personas/smoke.sh` — frontmatter + all-5-personas + no-private-brands check.
 - `tests/personas/fixtures/sample-piece.md` — neutral fixture for manual smoke testing.
+- `skills/audit/SKILL.md` — `/audit` skill (read-only codebase health report, `--memory`/`--out`/`--deep` flags).
+- `tests/audit/smoke.sh` — frontmatter + no-private-paths + flag-documentation + read-only-contract check.
 
 **References**:
 - Workspace convention: `~/Documents/CLAUDE.md`
