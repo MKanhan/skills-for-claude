@@ -1,5 +1,13 @@
 # skills — Atelier Skills
 
+## Venture
+
+<!-- prosa: tese, oferta, modelo de receita, mercado, domínio/canais -->
+
+```venture
+icp: "OSS — devs e entusiastas de agentes de código; sem comprador (aquisição e credibilidade, não receita)"
+```
+
 ## Mission
 
 Curated catalog of portable Claude Code skills, packaged for external use. Phase 1 ships an open-source GitHub repo with 3 polished skills extracted from operator's daily flow (PT-BR + EN). Phase 2 (conditional on demand signals) wraps additional premium skills behind a paid tier.
@@ -104,5 +112,5 @@ See `ROADMAP.md` for full state. Quick summary:
 **References**:
 - Workspace convention: `~/Documents/CLAUDE.md`
 - Spec template: `~/Documents/Infra/docs/spec-template.md`
-- Portfolio state: `~/Documents/portfolio-state.md`
+- Portfolio (derivado, semanal): `~/Documents/portfolio.md`
 - Adjacent open-source projects: `~/Documents/projects/open-source/prose-loop/`, `~/Documents/projects/open-source/archlint/`
