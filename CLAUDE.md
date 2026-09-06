@@ -8,31 +8,15 @@
 icp: "OSS — devs e entusiastas de agentes de código; sem comprador (aquisição e credibilidade, não receita)"
 ```
 
-## Mission
+Curated catalog of portable Claude Code skills, packaged for external use. Phase 1 shipped an open-source GitHub repo with 3 polished skills extracted from the operator's daily flow (PT-BR + EN). Phase 2 (conditional on demand signals) would wrap additional premium skills behind a paid tier.
 
-Curated catalog of portable Claude Code skills, packaged for external use. Phase 1 ships an open-source GitHub repo with 3 polished skills extracted from operator's daily flow (PT-BR + EN). Phase 2 (conditional on demand signals) wraps additional premium skills behind a paid tier.
+Editorial positioning: PT-BR as differentiator. The English-language skill ecosystem is competitive; PT-BR is empty. Operator's domain credibility (Substack EN essays + kanhan.com.br PT-BR + Bartleby + paper9) anchors the curation.
 
-Editorial positioning: PT-BR as differentiator. The English-language skill ecosystem is competitive; PT-BR is empty. Operator's domain credibility (Substack EN ensaios + kanhan.com.br PT-BR + Bartleby + paper9) anchors the curation.
+### Scope
 
-## Scope
+**Phase 1 (shipped)**: 3 skills extracted and polished for external use; bilingual README + install instructions + MIT license; one channel — public GitHub repo at `github.com/MKanhan/skills-for-claude`; announcement posts (EN Substack essay + PT-BR kanhan.com.br + LinkedIn cross-post).
 
-**In scope (Phase 1)**:
-- 3 skills extracted from `~/.claude/projects/-Users-kanhan-Documents/` and polished for external use.
-- README PT-BR + EN, install instructions, MIT license.
-- One distribution channel: public GitHub repo at **`github.com/MKanhan/skills-for-claude`**.
-- Two announcement posts: 1 EN essay (Substack) + 1 PT-BR (kanhan.com.br) + LinkedIn cross-post.
-
-**Out of scope (Phase 1)**:
-- Paid features, landing page, Stripe.
-- Skill marketplace web UI.
-- Premium repo.
-- All deferred to Phase 2 — gated by Phase 1 measurement (see ROADMAP).
-
-**Phase 2 (conditional)**:
-- 2 additional premium skills not in OSS repo.
-- Landing page `kanhan.com.br/skills`.
-- Paid tier R$ 49/mês or R$ 399 lifetime via Stripe (TBD).
-- Triggered by: ≥50 stars in 30 days OR ≥5 external issues/PRs.
+**Phase 2 (conditional, not triggered)**: 2 additional premium skills, landing page `kanhan.com.br/skills`, paid tier R$ 49/mês or R$ 399 lifetime via Stripe (TBD). Trigger: ≥50 stars in 30 days OR ≥5 external issues/PRs OR ≥3 inbound DMs asking for "more skills like this". Kill: <10 stars + 0 issues + 0 DMs at day 30, no mention on LinkedIn/Substack. Explicitly gated so it only proceeds on signal independent of Bartleby/paper9 attention. See Now/Next for where the actual signal landed.
 
 ## Stack
 
@@ -46,71 +30,45 @@ Editorial positioning: PT-BR as differentiator. The English-language skill ecosy
 ```
 skills/
 ├── CLAUDE.md          ← this file (operational)
-├── ROADMAP.md         ← strategic state (phases, sprints, gates)
 ├── skills_log.md      ← decisions + debug history
 ├── specs/             ← thin specs (NN_slug.md)
 │   └── 00_bootstrap.md
 ├── README.md          ← public-facing (for GitHub)
-├── LICENSE            ← MIT
+├── LICENSE             ← MIT
 ├── .gitignore
-└── skills/            ← the 3 polished skills live here (after Sprint 01-03)
-    ├── <skill-1>/
-    ├── <skill-2>/
-    └── <skill-3>/
+└── skills/            ← the 3 polished skills
+    ├── spec/
+    ├── personas/
+    └── audit/
 ```
 
 ## Key conventions
 
 - **Language**: skill internal language follows source (operator's existing skills are mixed PT-BR/EN). README and meta-docs are bilingual.
-- **Portability gate**: a skill is portable when zero references to operator's filesystem (`~/Documents/`, `Infra/data/signals.db`, Notion data sources, etc.) remain. Sprint 01-03 enforce.
+- **Portability gate**: a skill is portable when zero references to operator's filesystem (`~/Documents/`, `Infra/data/signals.db`, Notion data sources, etc.) remain.
 - **No secrets**: no `.env`, no API keys, no LinkedIn cookies.
 - **Tests as guards**: a smoke test per skill verifies it loads + runs with mock inputs.
-- **Branding**: public repo name is `skills-for-claude` (decided 2026-05-22). "Atelier Skills" is the internal/working name; Phase 2 branding for paid tier deferred.
+- **Branding**: public repo name is `skills-for-claude` (decided 2026-05-22). "Atelier Skills" is the internal/working name; Phase 2 branding for a paid tier is deferred.
 
-## Roadmap
+## Now / Next
 
-See `ROADMAP.md` for full state. Quick summary:
+**Phase 1 complete and public.** All 5 sprints done (bootstrap → `/spec` → `/personas` → `/audit` → public launch → measurement-gate mechanism). Repo `github.com/MKanhan/skills-for-claude` is public and pushed (confirmed on GitHub: created 2026-05-26, last push 2026-09-05), tagged `sprint-01-spec`, `sprint-02-personas`, `sprint-03-audit`, `sprint-05-measure`, `v0.1.0`. The 3 skills (`/spec`, `/personas`, `/audit`) ship with bilingual READMEs + smoke tests; CI green on push/PR.
 
-- **Sprint 00 — Bootstrap** (current). Spec: `specs/00_bootstrap.md`. Directory + scaffolds + LICENSE + .gitignore + spec template.
-- **Sprint 01 — `/spec` extraction** (planned). Polish + test + README.
-- **Sprint 02 — `/personas` extraction** (planned).
-- **Sprint 03 — `/audit` extraction** (planned).
-- **Sprint 04 — Public launch** (planned). README polish, GitHub repo public, 2 announcement posts, LinkedIn.
-- **Sprint 05 — Measurement gate** (planned). 30 days post-launch: count stars, issues, PRs. Decision: continue to Phase 2 or kill.
+**Measurement gate: signal checked, never formally closed.** Day 30 (~2026-06-25) passed without `tools/measure.sh` running — `skills_log.md`'s Day-30 template is still an empty placeholder. Checked directly against GitHub now (2026-09-06, 3+ months post-launch): **0 stars, 0 issues, 0 PRs** — meets the kill threshold on the numeric side. Whether there was any mention on LinkedIn/Substack is unverified, and uncertain anyway given the gap below. Branch decision (kill / extend / trigger Phase 2) is the operator's call, not made here.
+
+**Announcement batch: 1 of 4 drafts missing.** `outputs/posts/` has the PT-BR kanhan.com.br post and both LinkedIn posts (EN + PT-BR), but no `en/skills-for-claude-launch.md` — the EN Substack essay draft that the original launch handoff pointed to isn't in the directory. Worth confirming with the operator whether it was ever written, published directly, or lost, before treating the announcement batch as complete or drawing conclusions from the 0/0/0 signal above.
+
+**Phase 2**: not triggered — deferred, see Scope above for conditions.
 
 ## Handoff
 
-**Last update**: 2026-05-26 — **Phase 1 complete locally.** Sprints 01–05 all done. Five commits, four sprint tags (`sprint-01-spec`, `sprint-02-personas`, `sprint-03-audit`, `sprint-05-measure`) + release tag `v0.1.0`. 3 skills (`/spec`, `/personas`, `/audit`) shipped with bilingual READMEs + smoke tests (all green, CI workflow in place). 4 announcement drafts operator-local in `outputs/` (gitignored). Measurement helper `tools/measure.sh` ready to run on Day 30.
+Last real work: Phase 1 sprints 00–05, all closed 2026-05-26. Since then, two housekeeping passes only (venture manifest added 2026-07-31; log distilled to 7 decisions 2026-09-05) — no product code touched.
 
-**Decisions captured 2026-05-22** (post-bootstrap):
-- Skills to extract: `/spec` (Sprint 01), `/personas` (Sprint 02), `/audit` (Sprint 03).
-- Public repo name: `MKanhan/skills-for-claude` (created publicly, empty).
-- Public title: `Skills for Claude / Skills para Claude`.
+**Next session, if picking this up**: (1) resolve the missing EN Substack draft; (2) decide the Phase 1 measurement branch given the 0/0/0 signal above — `tools/measure.sh` (gh CLI + jq) is ready to run and emits a paste-ready record for `skills_log.md`; (3) only if Phase 2 triggers, decide branding + pricing for the paid tier.
 
-**Operator pending** (post-auto-mode):
-1. Push to remote — Sprint 04 committed + tagged `v0.1.0` locally. Run `git push origin main && git push --tags` to make it public (operator-only action).
-2. Review 4 announcement drafts in `outputs/posts/`:
-   - `en/skills-for-claude-launch.md` (~1262 words) — publish to Substack via `/push-substack`.
-   - `pt-br/skills-para-claude-lancamento.md` (~916 words) — publish manually to kanhan.com.br.
-   - `linkedin/en.md` (~254 words) — publish manually to LinkedIn after Substack URL is live.
-   - `linkedin/pt-br.md` (~261 words) — publish manually to LinkedIn after kanhan.com.br URL is live.
-3. After Day 30 (≈ 2026-06-25): run `bash tools/measure.sh` and follow Sprint 05 branch decision (trigger Phase 2 / extend / kill).
-4. (Phase 2 only) Decide branding + pricing for paid tier — deferred until Phase 2 trigger fires.
+## References
 
-**Critical files**:
-- `skills/spec/SKILL.md` — `/spec` skill entry point.
-- `skills/spec/templates/spec-template.md` — bundled template.
-- `tests/spec/smoke.sh` — portability + frontmatter check.
-- `skills/personas/SKILL.md` — `/personas` skill (5 reader personas, PT-BR output).
-- `tests/personas/smoke.sh` — frontmatter + all-5-personas + no-private-brands check.
-- `tests/personas/fixtures/sample-piece.md` — neutral fixture for manual smoke testing.
-- `skills/audit/SKILL.md` — `/audit` skill (read-only codebase health report, `--memory`/`--out`/`--deep` flags).
-- `tests/audit/smoke.sh` — frontmatter + no-private-paths + flag-documentation + read-only-contract check.
-- `tools/measure.sh` — Day-30 measurement helper (gh CLI + jq; emits paste-ready markdown for `skills_log.md`).
-- `.github/workflows/ci.yml` — runs all 3 smoke tests on push and PR.
-
-**References**:
 - Workspace convention: `~/Documents/CLAUDE.md`
-- Spec template: `~/Documents/Infra/docs/spec-template.md`
-- Portfolio (derivado, semanal): `~/Documents/portfolio.md`
-- Adjacent open-source projects: `~/Documents/projects/open-source/prose-loop/`, `~/Documents/projects/open-source/archlint/`
+- Spec template: `~/Documents/infra/docs/spec-template.md`
+- Portfolio (derived, weekly): `~/Documents/portfolio.md`
+- Adjacent open-source projects: `~/Documents/software/prose-loop/`, `~/Documents/software/archlint/`
