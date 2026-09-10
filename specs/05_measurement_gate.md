@@ -1,3 +1,7 @@
+---
+status: done
+---
+
 # Spec 05 — Day-30 measurement gate
 
 ## Goal

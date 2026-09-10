@@ -1,3 +1,7 @@
+---
+status: done
+---
+
 # Spec 04 — Public launch
 
 ## Goal

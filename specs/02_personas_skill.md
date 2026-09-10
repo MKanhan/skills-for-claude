@@ -1,3 +1,7 @@
+---
+status: done
+---
+
 # Spec 02 — `/personas` skill extraction
 
 ## Goal

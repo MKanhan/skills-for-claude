@@ -1,3 +1,7 @@
+---
+status: done
+---
+
 # Spec 00 — Bootstrap
 
 ## Goal

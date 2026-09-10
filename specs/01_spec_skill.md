@@ -1,3 +1,7 @@
+---
+status: done
+---
+
 # Spec 01 — `/spec` skill extraction
 
 ## Goal

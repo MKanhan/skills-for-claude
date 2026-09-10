@@ -1,3 +1,7 @@
+---
+status: done
+---
+
 # Spec 03 — `/audit` skill extraction
 
 ## Goal
